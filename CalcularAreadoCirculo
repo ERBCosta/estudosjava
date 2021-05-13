@@ -1,0 +1,19 @@
+public class Exercicio2NelioAlves {
+
+	public static void main(String[] args) {
+		double raio;
+		double area;
+						
+		System.out.println("Digite o valor do raio do círculo : ");
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		raio = sc.nextDouble();
+		area = Math.PI * Math.pow(raio, 2);
+				
+		System.out.printf("A area do circulo é: %.4f \n", area);
+		
+		sc.close();
+
+	}
+
+}
