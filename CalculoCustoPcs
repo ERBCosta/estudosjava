@@ -1,0 +1,44 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exercicio05NelioAlves {
+
+	public static void main(String[] args) {
+		
+		int cpc1, npcs1, cpc2, npcs2;
+		double vunit1, vunit2, total1, total2, total;
+		
+		Locale.setDefault(Locale.US);
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Digite o código da peça: ");
+		cpc1 = teclado.nextInt();
+		
+		System.out.println("Digite a quantidade de peças: ");
+		npcs1 = teclado.nextInt();
+		
+		System.out.println("Digite o valor da peça: ");
+		vunit1 = teclado.nextDouble();
+		
+		total1 = npcs1 * vunit1 ;
+		
+		System.out.println("Digite o código da peça: ");
+		cpc2 = teclado.nextInt();
+		
+		System.out.println("Digite a quantidade de peças: ");
+		npcs2 = teclado.nextInt();
+		
+		System.out.println("Digite o valor da peça: ");
+		vunit2 = teclado.nextDouble();
+		
+		total2 = npcs2 * vunit2 ;
+		
+		total = total1 + total2;
+		
+		System.out.printf("Valor a pagar: R$ %.2f", total);
+		
+		teclado.close();
+
+	}
+
+}
