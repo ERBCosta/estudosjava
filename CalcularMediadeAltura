@@ -1,0 +1,42 @@
+package br.com.exerciciosjava.iniciante;
+
+import java.util.Scanner;
+
+public class ExercicioIniciante02 {
+
+	public static void main(String[] args) {
+		// variables
+		int sex,nWomen = 0, nMans = 0; 
+		float height, sum = 0, AverageMens = 0, larger = 0, smaller = 10;
+		Scanner sc = new Scanner(System.in);
+		
+		//process
+		for (int i=0; i<10; i++) {
+			System.out.print("Escolha o sexo da pessoa (1-Mulher, 2-Homem): ");
+			sex = sc.nextInt();
+			System.out.print("Digite a altura: ");
+			height = sc.nextFloat();
+			if (sex == 1) {
+				nWomen++;
+			} else if (sex == 2) {
+				nMans++;
+				sum = sum + height;
+			} else {
+				System.out.println("Por favor escolha entre as opções 1 ou 2");
+			}
+			if (height > larger) {
+				larger = height;
+			} else if (height < smaller) {
+				smaller = height;
+			}
+		}
+		AverageMens = sum / nMans;
+		
+		System.out.println("A maior altura do grupo é de " + larger + " m, e a menor é de " + smaller + " m");
+		System.out.println("A média de altura dos homens é " + AverageMens + " m");
+		System.out.println("O número de mulheres é " + nWomen);
+		
+		
+		sc.close();
+
+	}
