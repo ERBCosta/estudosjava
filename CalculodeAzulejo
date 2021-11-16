@@ -1,0 +1,18 @@
+package br.com.exerciciosjava.iniciante;
+
+public class ExercicioIniciante04 {
+	
+	public static void main(String[] args) {
+		//variables
+		double LarguraParede, AlturaParede, AlturaAzulejo, LarguraAzulejo, qtde;
+		
+		LarguraParede = 2.6;
+		AlturaParede = 1.6;
+		AlturaAzulejo = 0.35;
+		LarguraAzulejo = 0.3;
+		
+		qtde = (LarguraParede * AlturaParede) / (AlturaAzulejo * LarguraAzulejo);
+		
+		System.out.println("Quantidade de Azulejos Necessária para essa parede: " + qtde);
+	}
+}
