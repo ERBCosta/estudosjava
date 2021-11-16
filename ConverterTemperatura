@@ -1,0 +1,39 @@
+package br.com.exerciciosjava.iniciante;
+
+import java.util.Scanner;
+
+public class ExercicioIniciante01 {
+	public static void main(String[] args) {
+	//variables
+	Scanner sc = new Scanner(System.in);
+	double fah, k, re, ra;
+	int option;
+	
+	//Data entering
+	System.out.println("Digite a temperatura em graus Celsius: º");
+	double Celsius = sc.nextDouble();
+	System.out.println("Você quer converter o valor digitado para:\n Digite 1 para Kelvin\n Digite 2 para Fahrenheit\n Digite 3 para Réaumur\n digite 4 para Rankine");
+	
+	//process
+	
+	switch(option = sc.nextInt()) {
+	case 1: k = Celsius + 273.15;
+	System.out.printf("\nO valor da temperatura informada convertida em Kelvin é: \n"+ k);
+	break;
+	case 2: fah = Celsius * 1.8 + 32;
+	System.out.printf("O valor da temperatura informada convertida em Fahrenheit é: \n"+ fah);
+	break;
+	case 3: re = Celsius * 0.8;
+	System.out.printf("\nO valor da temperatura informada convertida em Réaumur é: \n"+ re);
+	break;
+	case 4: ra = Celsius * 1.8 + 32 + 459.67;
+	System.out.printf("\nO valor da temperatura informada convertida em Rankine é: \n"+ ra);
+	break;
+	default: System.out.printf("\n\nPor favor escolha entre as opções 1 - 2 - 3 ou 4");
+	}
+	
+	sc.close();
+		
+	}
+
+}
